@@ -24,7 +24,7 @@ cleanup() {
 trap cleanup EXIT INT TERM
 
 if [[ ! -d node_modules ]]; then
-  npm ci
+  npm install --no-audit --no-fund
 fi
 
 frontend_port="${FRONTEND_PORT:-5173}"
